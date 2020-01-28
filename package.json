@@ -1,0 +1,23 @@
+{
+  "name": "to-do-app_group2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-K3/To-Do-App_group2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-K3/To-Do-App_group2/issues"
+  },
+  "homepage": "https://github.com/GSG-K3/To-Do-App_group2#readme",
+  "dependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.0"
+  }
+}
