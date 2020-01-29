@@ -14,19 +14,45 @@
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
-    var todoNode = document.createElement('li');
+    var Submit = document.getElementById("Submit");
+      var list =document.getElementById("idList");
+    // for( let i=0 ;i<state.length-1 ; i++){
+     
+      console.log(typeof(liTodo));
+
+      Submit.addEventListener('click', function(event) {
+      
+        var liTodo = document.createElement('LI');
+        var inputText =document.getElementsByTagName("input")[0].value;
+      
+       const span = document.createElement("span")
+      span.innerHTML=inputText;
+      let check = document.createElement('input');
+      
+        list.appendChild(liTodo);
+        liTodo.appendChild(check);
+         liTodo.appendChild(span);
+         check.type= "checkbox";
+         var deleteButtonNode = document.createElement('button');
+       document.getElementById("myInput").value = "";
+       deleteButtonNode.innerHTML = "delete";
+       liTodo.appendChild(deleteButtonNode );
+
+      });
+      
+      
+   
+    
     // you will need to use addEventListener
 
     // add span holding description
-
     // this adds the delete button
-    var deleteButtonNode = document.createElement('button');
+    
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
-
     // add markTodo button
 
     // add classes for css
@@ -38,7 +64,7 @@
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
+      event.preventDefault()
       // what is inside event.target?
 
       var description = '?'; // event.target ....
