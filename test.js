@@ -1,17 +1,10 @@
 var test = require('tape');
 var logic = require('./logic.js');
 
-
-
-
-
-
-
 test('delete testing', function(t) {
   let array =[
     {id:0 , description:"sports",done:false },
     {id:1 , description:"wash",done:false},
-    
   ];
   
   let actual = logic.deleteTodo(array, 0).length;
@@ -22,14 +15,16 @@ test('delete testing', function(t) {
   t.end();
 });
 
-
-
-// test('addTodo a new todo item to model.todos Array ', function (t) {
-//   // const root = document.getElementById(idList);
-//   // let li = document.createElement('li');
-//   // li.id = 'task1';
-//   // root.appendChild(li);
-//   t.deepEqual(addTodo(todos, newTodo), [-3,'first todo'], "Todo list item added.");
-//   t.end();
-// });
+test('addTodo a new todo item to model.todos Array ', function (t) {
+   todos=[
+  ]
+  newTodo={id:-3,description:'first todo'};
+  t.deepEqual(logic.addTodo(todos, newTodo), [{id:-3,description:'first todo'}], "Todo list item added.");
+  t.deepEqual(logic.addTodo(todos, newTodo), [{id:3,description:'second todo'}], "Todo list item added.");
+  t.end();
+});
+test('Example test', function(t) {
+  t.pass();
+  t.end();
+});
 
