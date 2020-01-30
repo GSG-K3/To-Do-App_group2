@@ -49,9 +49,7 @@ var todoFunctions = {
     // hint: array.filter
     const newarr = [...todos];
 
-    let removetask = newarr.filter(e => {
-      return e.id != idToDelete;
-    });
+    let removetask = newarr.filter(e => { return e.id != idToDelete;});
     return removetask;
   
   },

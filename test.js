@@ -16,13 +16,14 @@ test('delete testing', function(t) {
 });
 
 test('addTodo a new todo item to model.todos Array ', function (t) {
-   todos=[
-  ]
-  newTodo={id:-3,description:'first todo'};
-  t.deepEqual(logic.addTodo(todos, newTodo), [{id:-3,description:'first todo'}], "Todo list item added.");
-  t.deepEqual(logic.addTodo(todos, newTodo), [{id:3,description:'second todo'}], "Todo list item added.");
+    var expected = [{id:-3,description:'first todo'}]
+  t.deepEqual(logic.addTodo(), "undefind","")
+  t.deepEqual(logic.addTodo([],""), "todo is an object ")
+  t.deepEqual(logic.addTodo([], {id:-3,description:'first todo'}), expected ,'Todo list item added.');
+  
   t.end();
 });
+
 test('Example test', function(t) {
   t.pass();
   t.end();
