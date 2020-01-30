@@ -22,7 +22,7 @@
 
       Submit.addEventListener('click', function(event) {
       
-        var liTodo = document.createElement('LI');
+        var liTodo = document.createElement('li');
         var inputText =document.getElementsByTagName("input")[0].value;
       
        const span = document.createElement("span")
@@ -38,6 +38,12 @@
        deleteButtonNode.innerHTML = "delete";
        liTodo.appendChild(deleteButtonNode );
 
+
+      deleteButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.deleteTodo(state, todo.id);
+      console.log ("jgkd")
+      update(newState);
+    });
       });
       
       
@@ -48,13 +54,11 @@
     // add span holding description
     // this adds the delete button
     
-    deleteButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
-      update(newState);
-    });
+    
     todoNode.appendChild(deleteButtonNode);
     // add markTodo button
 
+    
     // add classes for css
 
     return todoNode;
