@@ -8,7 +8,7 @@ How we divide the work?
 -
 Bayan+Tasneem > Delete test & function + css
 Duha > Dom of add fn + its test 
-Nujood> Css + add fn 
+Nujood> Css + add fn.
 
 
 
